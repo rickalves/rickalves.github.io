@@ -57,7 +57,6 @@ const observer = new IntersectionObserver((entries) => {
 
   //Função de scroll da página
 document.querySelector('body').onscroll = (e) => {
-  
   //Fecha o menu quando ocorre scroll
   if(window.innerWidth <= 768){
       btnToggler.classList.remove('change')

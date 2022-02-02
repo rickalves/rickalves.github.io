@@ -52,6 +52,7 @@ header{
     box-shadow: 1px 6px 5px #242323;
     padding: 0 100px;
     align-items: center;
+    transition: all 0.2s ease-in-out 0.2s;
 }
 
 .nav-bar > nav {
@@ -72,6 +73,7 @@ header{
     background-color: var(--cor-secundaria);
     width: 100%;
     box-sizing: border-box;
+    transition: all 0.3s ease-in-out 0.1s;
 }
 .nav-bar-fixed h1{
     color: #1d1d1d;
@@ -98,6 +100,7 @@ header{
   flex-direction: column;
   align-items: center;
   padding: 100px;
+  text-align: center;
 }
 
 .card-bio > img{
@@ -111,10 +114,13 @@ header{
 .card-bio p{
    margin-top: -20px;
    color: var(--cor-secundaria);
-   text-align: center;
 }
-.card-bio h1{
-    text-align: center;
+
+.card-bio h3{
+    margin-top: -25px;
+    color: #868686;
+    font-weight: 400;
+    font-size: 1.5rem;
 }
 
 .card-bio .social{
@@ -165,9 +171,6 @@ h3{
   .change .bar3 {
     transform: rotate(45deg) translate(-4px, -5px);
   }
-
-
-
 
 /* ---------------Section Sobre--------------------- */
 
@@ -476,7 +479,7 @@ footer > p > strong{
         background-color:var(--cor-secundaria);
         z-index: 1;
         left: calc(100vw - 179px);
-        top: 58px;
+        top: 67px;
         color: #000000;
         display: none;
     }
@@ -519,7 +522,7 @@ footer > p > strong{
     }
 
     .navbar-toggler{
-        margin-top: -70px;
+        margin-top: -90px;
     }
 
     h2, h3{
