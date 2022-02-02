@@ -370,11 +370,7 @@ footer > p > strong{
 }
 
 .scaleEffect{
-    animation: scaleEffect;
-    animation-direction: alternate;
-    animation-fill-mode: both;
-    animation-timing-function: ease-in-out;
-    animation-duration: 0.5s;
+    animation: scaleEffect 0.5s ease-in-out alternate both;
 }
 
 .fadeInEffect{
@@ -401,8 +397,6 @@ footer > p > strong{
         opacity: 1.0;
     }
 }
-
-
 /* ------------Classes de grid layout--------------*/
 
 .border{
@@ -508,7 +502,7 @@ footer > p > strong{
 
     .card-bio{
         padding: 0;
-        margin-top: 50px;
+        margin-top: 100px;
     }
     .card-bio > img{
         height: 200px;
