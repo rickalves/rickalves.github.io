@@ -36,6 +36,16 @@ ul, li{
 header{
     height: 100vh;
 }
+
+/* Logo styles */
+.logo img{
+    height: 65px;  
+}
+
+.logo > h1{
+    color: var(--cor-secundaria);
+}
+/* Navbar styles */
 .nav-bar{
     background-color: #1d1d1d;
     height: 80px;
@@ -55,10 +65,6 @@ header{
 }
 .nav-bar ul > li{
     margin-left: 30px; 
-}
-
-.nav-bar > h1{
-    color: var(--cor-secundaria);
 }
 
 .nav-bar-fixed{
@@ -285,15 +291,22 @@ section#habilidades{
 .frontend > div:nth-of-type(3) .percentual{
     width: 80%;
 }
+
+.frontend > div:nth-of-type(4) .percentual{
+    width: 70%;
+}
 /* ---------Definindo percentual backend---------------- */
 .backend > div:nth-of-type(1) .percentual{
     width: 75%;
 }
 .backend > div:nth-of-type(2) .percentual{
-    width: 60%;
+    width: 70%;
 }
 .backend > div:nth-of-type(3) .percentual{
-    width: 50%;
+    width: 60%;
+}
+.backend > div:nth-of-type(4) .percentual{
+    width: 80%;
 }
 
 /* -----------------------Footer Styles------------------------ */

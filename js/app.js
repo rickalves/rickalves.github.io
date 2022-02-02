@@ -4,6 +4,7 @@ const sobre = document.querySelector("#sobre")
 const habilidades = document.querySelector("#habilidades")
 const container = document.querySelector(".container")
 const navbar = document.querySelector(".nav-bar > nav")
+const logoImg = document.querySelector(".logo img")
 
 //Botão toggle
 navbar.style.display = ''
@@ -71,9 +72,11 @@ document.querySelector('body').onscroll = (e) => {
     if(window.scrollY.toFixed() >= 100){
       navbar2.classList.add('nav-bar-fixed')
       header.style.zIndex = '1'
+      logoImg.src = './assets/img/logo-black.png'
       observer.unobserve(header)
     }else{
       navbar2.classList.remove('nav-bar-fixed')
+      logoImg.src = './assets/img/logo-yellow.png'
       observer.observe(header)
     }
     
