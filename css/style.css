@@ -68,6 +68,7 @@ header{
     margin-left: 30px; 
 }
 
+/* --------------Menu Fixo-------------------- */
 .nav-bar-fixed{
     position: fixed;
     background-color: var(--cor-secundaria);
@@ -95,6 +96,7 @@ header{
     color: #fff;
 }
 
+/* -----------------Card da Bio------------------ */
 .card-bio{
   display: flex;
   flex-direction: column;
@@ -143,7 +145,7 @@ h3{
     height: 40px;
     background-color: var(--cor-secundaria);
     cursor: pointer;
-    position: sticky;
+    position: relative;
     left: calc(100vw - 70px);
     display: none;
     padding: 10px;
@@ -380,10 +382,8 @@ section#habilidades{
  /* ----------------------Contatos Style----------------------- */
  #contatos{
      margin-top: 100px;
+     column-gap: 40px;
  }
-
- 
- 
  #contatos h2{
      color: var(--cor-secundaria);
      text-align: center;
@@ -465,7 +465,8 @@ footer{
     align-items: center;
     justify-content: center;
     background-color: #1d1d1d;
-    height: 200px;
+    height: 150px;
+    padding: 0px 20px;
 }
 
 footer > p{
@@ -475,6 +476,11 @@ footer > p{
 
 footer > p > strong{
     color: var(--cor-secundaria);
+}
+
+footer .social a{
+    width: 35px;
+    height: 35px;
 }
 
 /* Social card */
@@ -626,10 +632,9 @@ footer > p > strong{
 
     .nav-bar > nav{
         position:absolute;
-        width: 150px;
+        width: 160px;
         background-color:var(--cor-secundaria);
-        z-index: 1;
-        left: calc(100vw - 179px);
+        right: 15px;
         top: 67px;
         color: #000000;
         display: none;
@@ -675,7 +680,6 @@ footer > p > strong{
     .navbar-toggler{
         margin-top: -90px;
     }
-
     h2, h3{
         text-align: center;
     }
@@ -690,13 +694,11 @@ footer > p > strong{
 
     .interesses .lista div{
         width: 120px;
-       margin: 5px;
-   }
-
+         margin: 5px;
+     }
   .contato ul{
     align-items: center;
   } 
-
   .contato ul li{
       display: flex;
       flex-direction: column;
@@ -705,7 +707,6 @@ footer > p > strong{
   .contato li strong{
       margin: 0;
   }
-
   .backend, .frontend{
       padding:0;
   }
@@ -714,5 +715,8 @@ footer > p > strong{
   }
   #habilidades h2, #sobre h2{
     font-size: 2rem;
-} 
+  } 
+  #contatos{
+    column-gap: 0px;
+ }
 }
