@@ -1,7 +1,10 @@
 const btnToggler = document.querySelector("#btnToggler")
 const header = document.querySelector("header")
 const sobre = document.querySelector("#sobre")
+const projetos = document.querySelector("#projetos")
+const projetosCard = document.querySelectorAll("#projetos .projeto")
 const habilidades = document.querySelector("#habilidades")
+const contatos = document.querySelector("#contatos")
 const container = document.querySelector(".container")
 const navbar = document.querySelector(".nav-bar > nav")
 const logoImg = document.querySelector(".logo img")
@@ -24,21 +27,23 @@ const options = {
     /* Configuração default.  */
     root: null,
     rootMargin: "0px",
-    threshold: [0.2],
+    threshold: [0],
   };
   
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if(entry.isIntersecting){
             entry.target.classList.add('fadeInEffect')
-        }else{
+        }
+        else{
             entry.target.classList.remove('fadeInEffect')
         }
     })
 }, options)
   
   container.childNodes.forEach((elem) => {
-        if(elem.nodeName !== '#text'){
+        if(elem.nodeName !== '#text' && elem.nodeName !== 'HEADER'){
+           console.log(elem.nodeName)
            elem.style.opacity = '0.0'
            observer.observe(elem)
         }      
@@ -72,13 +77,10 @@ document.querySelector('body').onscroll = (e) => {
       navbar2.classList.add('nav-bar-fixed')
       header.style.zIndex = '1'
       logoImg.src = './assets/img/logo-black.png'
-      observer.unobserve(header)
     }else{
       navbar2.classList.remove('nav-bar-fixed')
       logoImg.src = './assets/img/logo-yellow.png'
-      observer.observe(header)
-    }
-    
+    }  
 }
 
 sobre.childNodes.forEach((elem) => {
@@ -94,6 +96,38 @@ habilidades.childNodes.forEach((elem) => {
       observer.observe(elem)
   }  
 })
+
+projetos.childNodes.forEach((elem) => {
+  if(elem.nodeName !== '#text'){
+      elem.style.opacity = '0.0'
+      observer.observe(elem)
+  }  
+})
+
+contatos.childNodes.forEach((elem) => {
+  if(elem.nodeName !== '#text'){
+      elem.style.opacity = '0.0'
+      observer.observe(elem)
+  }  
+})
+
+/**------------Efeitos cards projetos---------------*/
+
+projetosCard.forEach(card => {
+  const cardInfo = Array.from(card.children).at(this.length - 1)
+  card.onmouseenter = (e) => {
+   cardInfo.style.display = 'flex'
+   cardInfo.style.animation = 'showCardInfo 0.7s ease-in normal'
+  }
+   card.onmouseleave = (e) => {
+    // cardInfo.style.animation = 'showCardInfo 1.2s ease-out 2 reverse'
+   
+     cardInfo.style.display = 'none'
+   
+    
+   }
+})
+
 
   
 

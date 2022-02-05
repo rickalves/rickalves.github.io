@@ -174,6 +174,7 @@ h3{
 
 /* ---------------Section Sobre--------------------- */
 
+
 #sobre > h2{
     font-size: 2.5rem;
     color:var(--cor-secundaria);
@@ -247,6 +248,7 @@ section#habilidades{
     text-align: center;
     font-size: 2.5rem;
     color: var(--cor-secundaria);
+    margin-bottom: -10px;
 }
 
 .habilidade .nivel-habilidade{
@@ -312,6 +314,150 @@ section#habilidades{
     width: 80%;
 }
 
+/* ---------------------Projetos Styles------------------------- */
+
+#projetos{
+    margin-top:100px;
+    gap: 20px;
+}
+#projetos > h2{
+    font-size: 2.5rem;
+    text-align: center;
+    color: var(--cor-secundaria);
+}
+
+.projeto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--cor-secundaria);
+    padding: 20px;
+    color: var(--cor-principal);
+    position: relative;
+    height: 180px;
+    box-shadow: 0 0 10px -2px #000000;
+    overflow: hidden;
+}
+.projeto div{
+  display: none;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  z-index: 1;
+  position:absolute;
+  width: 100%;
+  bottom: 0px;
+  background-color: #464646;
+  opacity: 0.95;
+}
+
+.projeto svg{
+    height: 100px;
+}
+
+.projeto h3, p, a{
+   margin-left: 10px;
+}
+
+.projeto h3{
+    color: #fff;
+}
+.projeto p{
+    color:rgb(158, 158, 158);
+    margin-top: -10px;
+ }
+
+ .projeto a{
+    color:var(--cor-secundaria);
+    margin-top: -10px;
+    margin-bottom: 10px;
+ }
+
+ .projeto div:hover{
+     animation: showCardProjeto 0.9s ease-in-out ;
+ }
+
+ /* ----------------------Contatos Style----------------------- */
+ #contatos{
+     margin-top: 100px;
+ }
+
+ 
+ 
+ #contatos h2{
+     color: var(--cor-secundaria);
+     text-align: center;
+     font-size: 2.5rem;
+ }
+ #contatos h3{
+    color: #868686;
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    text-align: left;
+}
+
+ #contatos ul{
+     display: flex;
+     flex-direction: column;
+ }
+
+ #contatos ul li{
+     margin-bottom: 35px;
+ }
+ #contatos li strong{
+     margin: 0px;
+     display: block;
+     margin-bottom: 10px;
+ }
+
+ #contatos a:hover{
+     color: #868686;
+ }
+ #contatos form{
+     width: 100%;
+ }
+ form div{
+     display: flex;
+     flex-direction: column;
+     margin-bottom: 20px;
+ }
+
+ form input, textarea {
+     border: none;
+     border-bottom: 2px solid #464646;
+     background:none;
+     height: 35px;
+     padding-bottom: 0px;
+     text-align: start;
+     color: rgb(214, 213, 213);
+     font-size: 1rem;
+     transition: border 0.4s ease;
+ }
+
+ form textarea{
+     height: 90px;
+     resize: none;
+ }
+form input:focus, textarea:focus{
+    outline: none;
+    border-bottom-color: var(--cor-secundaria); 
+}
+
+form button{
+    border: none;
+    padding: 10px 35px;
+    cursor: pointer;
+    background-color: #464646;
+    color: #fff;
+    transition: all 0.5s ease;
+    font-size: 0.9rem;
+}
+
+form button:hover{
+    background-color: var(--cor-secundaria);
+    color: var(--cor-principal);
+}
+
 /* -----------------------Footer Styles------------------------ */
 footer{
     display: flex;
@@ -374,7 +520,7 @@ footer > p > strong{
 }
 
 .fadeInEffect{
-    animation: fadeIn 0.5s ease-in-out 0.3s both;
+    animation: fadeIn 0.6s ease-in-out 0.3s both;
 }
 
 @keyframes scaleEffect{
@@ -388,13 +534,24 @@ footer > p > strong{
     }
 }
 
+@keyframes showCardInfo{
+    from {
+        transform: translate(0px, 120px);
+    }
+    to{
+        transform: translate(0px, 0px);
+    }
+}
+
 @keyframes fadeIn{
     from {
         opacity: 0.0;
+        transform: translate(0px, 140px);
     }
 
     to {
         opacity: 1.0;
+        transform: translate(0px, 0px);
     }
 }
 /* ------------Classes de grid layout--------------*/
@@ -523,6 +680,10 @@ footer > p > strong{
         text-align: center;
     }
 
+    #contatos h3{
+        text-align: center;
+    }
+
     .interesses .lista{
         justify-content: center;
     }
@@ -553,6 +714,5 @@ footer > p > strong{
   }
   #habilidades h2, #sobre h2{
     font-size: 2rem;
-}
-  
+} 
 }
